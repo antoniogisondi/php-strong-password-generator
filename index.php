@@ -1,4 +1,5 @@
 <?php 
+    // richiamo il file dov'è contenuta la funzione che mi genera la password
     include __DIR__.'/partials/functions.php';
 ?>
 
@@ -19,11 +20,13 @@
                 </div>
 
                 <div class="col card p-5">
+                    <!-- CREO LA FORM CON IL METODO GET -->
                     <form action="index.php" method="GET">
                         <div class="col-md-6">
                             <label for="length" class="form-label">Inserisci la lunghezza della password</label>
                             <input type="number" class="form-control" name="length_input" id="length_input">
                         </div>
+                        <!-- MANTENGO QUESTE RIGHE COMMENTATE NEL CASO MI SERVIRANNO PER PROSEGUIRE L'ESERCIZIO -->
                         <!-- <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Password</label>
                             <input type="password" class="form-control" id="inputPassword4">
@@ -63,6 +66,7 @@
                     </form>
                 </div>
                 <div class="col-12">
+                    <!-- RICHIAMO LA FUNZIONE NELL'HTML -->
                     <h5>La tua password generata è: <?php echo generateRandomPassword(); ?></h5>
                 </div>
             </div>
