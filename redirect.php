@@ -1,6 +1,8 @@
 <?php 
-//     // richiamo il file dov'è contenuta la funzione che mi genera la password
+    // richiamo il file dov'è contenuta la funzione che mi genera la password
    require __DIR__.'/partials/functions.php';
+
+    // creo la sessione che, se in caso non esistesse la sessione che contiene la password, mi riporti nel file index.php
    session_start();
    if(!isset($_SESSION['password'])){
     header("Location: index.php");

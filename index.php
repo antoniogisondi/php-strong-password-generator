@@ -2,6 +2,7 @@
     // richiamo il file dov'è contenuta la parte logica della pagina
     require __DIR__.'/partials/functions.php';
 
+    // creo la sessione che mi reindirizza , una volta creata la password, nella pagina dove me la mostrerà a video
     session_start();
     if(isset($_GET['password_length'])){
         $_SESSION['password'] = $password;
@@ -34,6 +35,27 @@
                         <div class="col-md-6">
                             <label for="password_length" class="form-label">Inserisci la lunghezza della password</label>
                             <input type="number" class="form-control" name="password_length" id="input">
+                        </div>
+
+                        <!-- creo altri elementi per consentire all'utente di scegliere do che tipo vorrebbe generare la password -->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" name="duplicates_characters" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Consenti ripetizioni di uno o più caratteri</label>
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" name="use_letters" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Lettere</label>
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" name="use_numbers" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Numeri</label>
+                        </div>
+
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" name="use_symbols" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Simboli</label>
                         </div>
 
                         <div class="col-12 mt-3">
