@@ -1,6 +1,6 @@
 <?php 
     // richiamo il file dov'è contenuta la funzione che mi genera la password
-    include __DIR__.'/partials/functions.php';
+    require __DIR__.'/partials/functions.php';
     
 ?>
 
@@ -10,6 +10,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
         <title>Password Generator</title>
     </head>
     <body>
@@ -20,7 +21,7 @@
                     <h3>Generatore di password efficaci</h3>
                 </div>
 
-                <div class="col card p-5">
+                <div class="col-6 card p-5">
                     <!-- CREO LA FORM CON IL METODO GET -->
                     <form action="redirect.php" method="GET">
                         <div class="col-md-6">

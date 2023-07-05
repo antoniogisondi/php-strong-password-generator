@@ -6,7 +6,11 @@
         $shfl = str_shuffle($comb);
         $pwd = substr($shfl, 0, $length);
         echo $pwd;
-        
     }
 
+    if(generateRandomPassword() != ''){
+        header('Location: /redirect.php');
+    }
+
+    
 ?>

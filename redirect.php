@@ -1,5 +1,6 @@
 <?php 
    require __DIR__.'/partials/functions.php';
+   session_start()
     
 ?>
 
