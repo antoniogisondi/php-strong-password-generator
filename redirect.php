@@ -1,7 +1,6 @@
 <?php 
+    // richiamo il file dov'è contenuta la funzione che mi genera la password
    require __DIR__.'/partials/functions.php';
-   session_start()
-    
 ?>
 
 <!DOCTYPE html>
@@ -10,14 +9,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style_redirect.css">
         <title>Password Generator</title>
     </head>
     <body>
+        <!-- creo il layout della pagina del risultato -->
         <div class="container">
-            <div class="row d-flex flex-column align-items-center">
-                <div class="col-12">
+            <div class="row d-flex flex-column align-items-center mt-3">
+                <div class="col-6">
+                <h4>La tua password generata è:</h4>
+                </div>
+                <div class="card col-6 p-3">
                     <!-- RICHIAMO LA FUNZIONE NELL'HTML -->
-                    <h5>La tua password generata è: <?php echo generateRandomPassword(); ?></h5>
+                    <h3><?php echo generateRandomPassword()?></h3>
                 </div>
             </div>
         </div>

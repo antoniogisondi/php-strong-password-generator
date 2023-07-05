@@ -1,4 +1,4 @@
-Descrizione
+DESCRIZIONE:
 Dobbiamo creare una pagina che permetta ai nostri utenti di utilizzare il nostro generatore di password (abbastanza) sicure. L’esercizio è suddiviso in varie milestone ed è molto importante svilupparle in modo ordinato.
 Milestone 1 Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php
 Milestone 2 Verificato il corretto funzionamento del nostro codice, spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
@@ -16,3 +16,5 @@ MILESTONE 1
 MILESTONE 2
 1- Ho creato un file function.php dove andrò a mettere la parte logica del programma, quindi la funzione,
 2- Includo il file function.php nel file index.php in modo tale da riprendere la parte logica e far funzionare il programma;
+
+MILESTONE 3
