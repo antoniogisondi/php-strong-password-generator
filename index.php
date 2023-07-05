@@ -1,6 +1,13 @@
 <?php 
     // richiamo il file dov'è contenuta la parte logica della pagina
     require __DIR__.'/partials/functions.php';
+
+    session_start();
+    if(isset($_GET['password_length'])){
+        $_SESSION['password'] = $password;
+        header("Location: redirect.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +30,10 @@
 
                 <div class="col-6 card p-5">
                     <!-- CREO LA FORM CON IL METODO GET -->
-                    <form action="redirect.php" method="GET">
+                    <form action="" method="GET">
                         <div class="col-md-6">
-                            <label for="length" class="form-label">Inserisci la lunghezza della password</label>
-                            <input type="number" class="form-control" name="input" id="input">
+                            <label for="password_length" class="form-label">Inserisci la lunghezza della password</label>
+                            <input type="number" class="form-control" name="password_length" id="input">
                         </div>
 
                         <div class="col-12 mt-3">

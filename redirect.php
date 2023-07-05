@@ -1,6 +1,14 @@
 <?php 
-    // richiamo il file dov'è contenuta la funzione che mi genera la password
+//     // richiamo il file dov'è contenuta la funzione che mi genera la password
    require __DIR__.'/partials/functions.php';
+   session_start();
+   if(!isset($_SESSION['password'])){
+    header("Location: index.php");
+    exit();
+   }
+
+   $password = $_SESSION['password'];
+    unset($_SESSION['password']);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +29,7 @@
                 </div>
                 <div class="card col-6 p-3">
                     <!-- RICHIAMO LA FUNZIONE NELL'HTML -->
-                    <h3><?php echo generateRandomPassword()?></h3>
+                    <h3><?php echo $password?></h3>
                 </div>
             </div>
         </div>
