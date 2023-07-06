@@ -18,3 +18,15 @@ MILESTONE 2
 2- Includo il file function.php nel file index.php in modo tale da riprendere la parte logica e far funzionare il programma;
 
 MILESTONE 3
+1- Modifico il file index.php avviando una sessione;
+2- Creo una condizione che:
+    ? $_GET['password_length'] esiste mi redirecta alla pagina redirect.php per la visualizzazione della password;
+
+MILESTONE 4
+1- Modifico il file functions.php aggiungendo una funzione che mi permette di generare una password con varie condizioni:
+    ? se utilizzo numeri ;
+    ?se utilizzo simboli;
+    ?se utilizzo lettere
+
+2- Faccio un ciclo for che mi permette di ciclare questi dati;
+3- Aggiungo la condizione che mi permette di usare caratteri doppi
